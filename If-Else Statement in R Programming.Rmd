@@ -1,0 +1,99 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# If-Else Statement in R Programming
+
+
+```{r}
+x<-25L
+if (is.integer(x))
+{
+  print("integer")
+}else
+  
+{
+  print("not integer")
+}
+```
+
+
+```{r}
+y<-c("bangla","english","math","physics")
+```
+
+
+```{r}
+
+if("english" %in%y)
+{
+  print("english is found")
+}else
+{
+  print("not found")
+}
+```
+
+
+```{r}
+marks<-70
+
+```
+
+
+```{r}
+if(marks<=80)
+{
+  print("A")
+}else
+{
+  print("A-")
+}
+```
+
+
+```{r}
+if(marks<80)
+{
+  print("A")
+  
+}else if(marks>60)
+{
+  print("A-")
+  
+}else
+{
+  print("B")
+}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
