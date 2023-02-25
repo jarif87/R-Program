@@ -1,0 +1,47 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+x<-1 : 10
+```
+
+
+```{r}
+for (value in x){
+  if (value==9){
+    next
+  }
+print(value)
+}
+
+```
+
+
+```{r}
+a<-2
+repeat{
+  print("hello")
+  if(a>=5)
+    break
+  a<-a+1
+}
+```
+
+
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
