@@ -1,0 +1,46 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+for (x in 20 : 50){
+  print(x)
+}
+```
+
+
+```{r}
+for (y in 10 : 30)
+{
+  print(y)
+}
+```
+
+
+```{r}
+for (y in 10 : 30)
+{
+  print(paste("My Number Is :",y))
+}
+```
+
+
+```{r}
+n<-c("book","pen","book_self","chair","table")
+```
+
+
+```{r}
+for (h in n)
+{
+  print(h)
+}
+```
+
+
+```{r}
+```
+
