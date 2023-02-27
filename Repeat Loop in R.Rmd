@@ -1,0 +1,91 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+
+# R repeat loop
+
+* A repeat loop is used to iterate a block of code. It is a special type of loop in which there is no condition to exit from the loop. For exiting, we include a break statement with a user-defined condition. This property of the loop makes it different from the other loops.
+
+* A repeat loop constructs with the help of the repeat keyword in R. It is very easy to construct an infinite loop in R.
+
+* The basic syntax of the repeat loop is as follows:
+
+```repeat {   
+   commands   
+   if(condition) {  
+      break  
+   }  
+}```
+
+
+```{r}
+x<-c("i","love","you","babu")
+```
+
+
+```{r}
+y<-4
+```
+
+
+```{r}
+repeat
+{
+  print(x)
+  y<-y+1
+  if(y>10)
+  {
+    break
+  }
+  
+}
+```
+
+
+```{r}
+x = 1
+
+# Repeat loop
+repeat {
+
+    print(x)
+    
+    # Break statement to terminate if x > 4
+    if (x > 4) {
+        break
+    } 
+    
+    # Increment x by 1
+    x = x + 1
+    
+}
+```
+
+
+```{r}
+x = 1
+sum = 0
+
+# Repeat loop
+repeat {
+
+    # Calculate sum
+    sum = sum + x
+    
+    # Print sum
+    print(sum)
+    
+    # Increment x by 1
+    x = x + 1
+    
+}
+```
+
+
+```{r}
+```
+
