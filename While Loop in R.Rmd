@@ -1,0 +1,38 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+v<-c("i","love","prgramming","and","it","is","always","i","want","to","do")
+```
+
+
+```{r}
+x<-2
+```
+
+
+```{r}
+while(x<10)
+{
+  print(v)
+  x<-x+1
+}
+```
+
+
+```{r}
+while(x<=10)
+{
+  print(v)
+  x<-x+1
+}
+```
+
+
+```{r}
+```
+
