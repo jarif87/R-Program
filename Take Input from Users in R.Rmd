@@ -1,0 +1,71 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+name<-readline(prompt = "Enter your name :")
+
+
+```
+
+
+```{r}
+age<-readline(prompt = "Enter your age :")
+```
+
+
+```{r}
+print(paste("his name is :",name,"his age is :",age))
+```
+
+
+```{r}
+paste("bangla","english","math",sep="-")
+
+```
+
+
+```{r}
+paste("bangla","english","math",sep="_")
+```
+
+
+```{r}
+paste("bangla","english","math",sep=" ")
+```
+
+
+```{r}
+paste("bangla","english","math")
+```
+```{r}
+paste("bangla","english","math",sep=",")
+```
+
+
+```{r}
+paste0("bangla","english","physics")
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
