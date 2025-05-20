@@ -1,0 +1,137 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+
+```
+
+```{r}
+library(tidyverse)
+library(ggbiplot)
+library(dplyr)
+
+```
+
+
+```{r}
+
+train <- readRDS("D:\\IDM\\Ex_Files_Data_Science_R\\Ex_Files_Data_Science_R\\Exercise Files\\data\\optdigits_trn.rds")
+test<-readRDS("D:\\IDM\\Ex_Files_Data_Science_R\\Ex_Files_Data_Science_R\\Exercise Files\\data\\optdigits_tst.rds")
+```
+
+
+```{r}
+head(train,5)
+```
+
+
+```{r}
+head(test,5)
+```
+
+
+```{r}
+dim(train)
+
+```
+
+
+```{r}
+cat("Rows:", nrow(train), "\nColumns:", ncol(train))
+```
+
+
+
+
+```{r}
+str(train)
+```
+
+
+```{r}
+any(is.na(train))
+```
+
+
+```{r}
+# principal components model using default method
+pc<-train%>%select(-y)%>%prcomp(center = TRUE,scale=TRUE)
+```
+
+
+```{r}
+pc%>%summary()
+```
+
+
+```{r}
+pc %>% plot(main = "Eigenvalues")
+```
+
+
+```{r}
+pc%>%ggbiplot(color=train$y,groups=factor(train$y))
+```
+
+
+```{r}
+newdata <- predict(pc, newdata = test %>% select(-y)) 
+```
+
+
+```{r}
+testpc<-pc
+```
+
+
+```{r}
+testpc$x<-newdata
+```
+
+
+```{r}
+
+# Verify data structure
+str(pc$x)  # Should be a numeric matrix
+str(newdata)  # Should match pc$x in structure (numeric matrix)
+```
+
+
+```{r}
+plot(pc$x[,1:2], col="gray", xlab="PC1", ylab="PC2", main="PCA Plot")
+```
+```{r}
+library(tidyverse)
+library(ggbiplot)
+
+# Perform PCA
+pc <- prcomp(train %>% select(-y), scale. = TRUE)
+
+# Plot PCA for training data
+ggbiplot(pc, obs.scale = 1, var.scale = 1,
+         groups = factor(train$y),
+         ellipse = TRUE, circle = TRUE) +
+  scale_color_discrete(name = '') +
+  theme_minimal()
+
+
+```
+
+
+```{r}
+# Project test data into PCA space
+newdata <- predict(pc, newdata = test %>% select(-y))
+
+```
+
+```{r}
+# Plot training set PCA scores (gray)
+plot(pc$x[, 1:2], col = "gray", xlab = "PC1", ylab = "PC2", main = "PCA Plot")
+
+# Overlay test set PCA scores (red)
+points(newdata[, 1:2], col = "red", pch = 16)
+
+```
